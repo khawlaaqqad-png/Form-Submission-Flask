@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, redirect
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -8,7 +7,7 @@ def index():
 
 @app.route('/result', methods=['POST'])
 def result():
-    name = request.form.get('name')
+    name = request.form.get('your_name')
     location = request.form.get('location')
     language = request.form.get('language')
     comment = request.form.get('comment')
